@@ -1,0 +1,171 @@
+.app-container {
+  background-image: url('/public/images/bg.jpeg'); /* Make sure this path works relative to your public folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #fff;
+  padding: 30px 40px;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.app-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  z-index: 0;
+}
+
+.app-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  color: #ffd700;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Upload Box Styling */
+.upload-box {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #333;
+  width: 100%;
+  max-width: 600px;
+}
+
+.upload-box input[type="file"] {
+  background-color: #2a2a2a;
+  padding: 8px;
+  color: #fff;
+  border-radius: 6px;
+  border: none;
+}
+
+/* NEW: Wrapper for Flashcards, Quiz, and Cloze Sections */
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Shared box styling */
+.card-box {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 380px;
+  min-width: 280px;
+}
+
+/* Quiz Section */
+.quiz-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.quiz-button {
+  background-color: #ffd700;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px 0;
+  font-size: 0.95rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.quiz-button:hover {
+  background-color: #e6c200;
+}
+
+.quiz-question {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+}
+
+.quiz-option {
+  display: block;
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .quiz-calendar-widget {
+    top: 10px;
+    right: 10px;
+    transform: scale(0.9);
+  }
+}
+
+.quiz-container,
+.upload-box,
+.left-pane,
+.right-pane,
+.quiz-calendar-widget {
+  background: rgba(30, 30, 30, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.quiz-calendar-widget h3 {
+  color: #ffd700;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.day-box.active {
+  background-color: #ffd700;
+}
+
+.quiz-input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #555;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.quiz-calendar-widget {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: rgba(30, 30, 30, 0.85);
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
