@@ -54,13 +54,38 @@ git clone https://github.com/your-username/quiz-generator.git
 cd quiz-generator
 ````
 
-### 2. Backend Setup (Python + Flask)
+### 2.Backend Setup
 
-```bash
-cd backend
-pip install -r requirements.txt
-python main.py
-```
+1. **Install dependencies**
+   Ensure you have FastAPI and Uvicorn installed:
+
+   ```bash
+   pip install fastapi uvicorn
+   ```
+
+2. **Run the development server**
+   Use the following command to start the backend with hot reload:
+
+   ```bash
+   uvicorn main:app --reload
+   ```
+
+   * If `main.py` is inside a folder (e.g., `backend/`), adjust the path:
+
+     ```bash
+     uvicorn backend.main:app --reload
+     ```
+
+3. **Access the API**
+
+   * Root URL: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+   * Swagger UI: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+   * ReDoc: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
+
+---
+
+Would you like me to update the full `README.md` file with frontend instructions, project structure, and other standard sections as well?
+
 
 > Backend runs at `http://localhost:5000`
 
