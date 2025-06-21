@@ -9,7 +9,7 @@ from sentence_transformers import SentenceTransformer
 from models.progress_tracker import log_score, update_xp_streak
 from datetime import date
 
-GROQ_API_KEY = "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"  # Replace with your actual key
+GROQ_API_KEY = "your_groq_cloud_api_key"  # Replace with your actual key
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 GROQ_MODEL = "llama3-8b-8192"
 embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
